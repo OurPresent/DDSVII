@@ -1,9 +1,9 @@
 <?php
     $v_min = $_POST['min'];
-    $v_max= $_POST['max'];
-    $i_max=0;
-    $r_max=0;
-    $a= array();
+    $v_max = $_POST['max'];
+    $i_max = 0;
+    $r_max = 0;
+    $a = array();
     
     echo "Creando arreglos unidimensionales (Vectores)... <br><br>";
     

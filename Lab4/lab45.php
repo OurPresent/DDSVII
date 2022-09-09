@@ -1,8 +1,12 @@
-<html>
-    <head>
-        <title>Laboratorio 4.5</title></head>
-    
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 4.5</title>
+<body>
+</head>
         <?php
             $i=1;
             if(array_key_exists('enviar', $_POST)){
@@ -36,14 +40,13 @@
                     }
                 }
             }
-            ?>
-        <FORM ACTION="lab45.php" METHOD="POST">
-
-            <br><br>Ingrese el tamaño de la matriz : <input type="text" name="num"><br><br>
-            <input type="submit" name= "enviar" value="Ingresar">
-
-        </FORM>
-  
+        ?>
+        <form action="lab45.php" method="post">
+            <br><br>
+            Ingrese el tamaño de la matriz: 
+            <input type="text" name="num">
+            <br><br>
+            <input type="submit" name="enviar" value="Ingresar">
+        </form>
     </body>
-
 </html>

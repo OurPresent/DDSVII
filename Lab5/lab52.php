@@ -8,9 +8,10 @@
         $extension = strtolower(end($limpiarArchivo));
         $nuevoArchivo = md5(time() . $nombrearchivo) . '.' . $extension;
         $nombreCompleto = $nuevoArchivo;
+        //$peso = filesize($tamArchivo);
         $arrayExtensiones = array('jpg', 'jpeg','gif', 'png');
         if (in_array($extension, $arrayExtensiones)){
-            if(filesize($tamArchivo) <= 1024000){
+            if($tamArchivo <= 1024000){
                 if (is_file($nombreCompleto)){
                     $idUnico = time();
                     $nombrearchivo = $idUnico . "-" . $nombrearchivo;

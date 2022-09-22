@@ -14,7 +14,7 @@
                 if($_REQUEST['num']!=""){
                     $m_size = $_REQUEST['num'];
                     if($m_size>1){
-                        $unit =1;
+                        $unit = 1;
                         echo "<table border=1>";
                         
                         for ($n1=1; $n1<=$m_size; $n1++)

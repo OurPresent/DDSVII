@@ -1,0 +1,22 @@
+CREATE TABLE votos(
+	id TINYINT (3) UNSIGNED NOT NULL AUTO_INCREMENT,
+    votos1 INT (10) UNSIGNED NOT NULL DEFAULT '0',
+    votos2 INT (10) UNSIGNED NOT NULL DEFAULT '0',
+    PRIMARY KEY (id)
+)
+
+CREATE DEFINER = `root`@`localhost` PROCEDURE `sp_listar_votos`() 
+BEGIN
+    SELECT votos1, votos2 FROM votos; 
+END;
+
+CREATE DEFINER = `root`@`localhost` PROCEDURE `sp_actualizar_votos`(
+IN param_votos1 VARCHAR(255),
+IN param_votos2 VARCHAR(255)
+)
+BEGIN
+	SET @s = CONCAT("UPDATE votos SET votos1 = ", param_votos1, ", votos2 = ", param_votos2);
+    PREPARE stmt FROM @s;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+END;

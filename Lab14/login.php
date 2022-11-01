@@ -10,7 +10,7 @@
 
         require_once("class/usuario.php");
 
-        $obj_usuarios = new usuario();
+        $obj_usuarios = new usuarios();
         $usuario_valido = $obj_usuarios -> validar_usuario($usuario, $clave_crypt);
 
         foreach($usuario_valido as $array_resp){

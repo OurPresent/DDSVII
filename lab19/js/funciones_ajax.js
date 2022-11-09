@@ -17,7 +17,7 @@ function file_explorer(){
 function ajax_file_upload(file_obj){
     if(file_obj != undefined){
         var form_data = new FormData();
-        form_data.append('file', file_obj)
+        form_data.append('file', file_obj);
         var xhttp = new XMLHttpRequest();
         xhttp.open("POST", "lab191.php", true);
         xhttp.onload = function(event){
@@ -25,7 +25,7 @@ function ajax_file_upload(file_obj){
             if(xhttp.status == 200){
                 oOutput.innerHTML = "<img src='"+this.responseText+"' alt='Imagen adjuntada' />";
             }else{
-                oOutput.innerHTML = "Error # "+ xhttp.status +" ha ocurrida¿o al intentar adjuntar la imagen";
+                oOutput.innerHTML = "Error # "+ xhttp.status +" ha ocurrida¿o al intentar adjuntar la imagen.";
             }
         }
         xhttp.send(form_data);

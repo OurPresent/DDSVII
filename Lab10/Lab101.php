@@ -12,7 +12,7 @@
         require_once("class/votos.php");
 
         if(array_key_exists('enviar', $_POST)){
-            print("<h1> ENCUESTA, VOTO REGUSTRADO <h1>\n");
+            print("<h1> ENCUESTA, VOTO REGISTRADO <h1>\n");
 
             $obj_votos = new votos();
             $result_votos = $obj_votos->listar_votos();
